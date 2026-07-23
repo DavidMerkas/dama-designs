@@ -1,0 +1,10 @@
+naziv: L-kuhinja sa skrivenom smočnicom
+lokacija: Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kuhinja po mjeri
+opis: L-oblika kuhinja po mjeri sa skrivenom smočnicom — praktično rješenje koje maksimalno iskorištava prostor i drži radne površine preglednima, dok je dodatni prostor za spremanje namirnica diskretno sakriven iza vlastitih vratiju.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

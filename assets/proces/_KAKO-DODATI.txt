@@ -1,0 +1,25 @@
+SLIKE ZA KORAKE PROCESA (5 koraka)
+==================================
+
+Stavi 5 slika s TOCNO ovim imenima:
+
+  01.jpg  -> Konzultacija i mjerenje   (razgovor s klijentom, mjerenje prostora)
+  02.jpg  -> Idejni dizajn             (3D vizualizacija, nacrti, uzorci materijala)
+  03.jpg  -> Izrada                    (pogon, strojevi, obrada drveta)
+  04.jpg  -> Montaza                   (ugradnja kod klijenta)
+  05.jpg  -> Primopredaja              (gotov prostor, detalj)
+
+KORISTE SE NA DVIJE STRANICE
+  - index.html      -> uspravni okvir 4:5  (5 stupaca, pregled)
+  - kako-radimo.html -> vodoravni okvir 4:3 (detaljna razrada, slika uz tekst)
+
+Ista slika ide na oba mjesta, samo se drukcije obrezuje (centrirano).
+
+FORMAT
+  - Preporuka ~1600x1200 px, .jpg
+  - VAZNO: drzi glavni motiv blize SREDINI slike.
+    Zbog dva razlicita omjera rubovi se obrezuju - sto je motiv
+    centriraniji, to bolje ispada u oba okvira.
+
+Dok ih ne stavis, stoje privremene placeholder slike.
+Javi kad ubacis pa mijenjam putanje (5 na index.html + 5 na kako-radimo.html).

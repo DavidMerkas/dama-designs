@@ -1,0 +1,12 @@
+naziv: Projekt DU
+lokacija: Sesvete, Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Ormari i kuhinja
+opis: Stan u Zagrebu za koji smo izradili namještaj po mjeri, uz prioritet na potrebe klijenta od prvog razgovora nadalje. U hodniku smo postavili bijeli ormar od poda do stropa s rotirajućim vratima na tihi domet i šipkom za vješanje odjeće, koji ujedno skriva sustav grijanja.
+
+Kuhinja je izrađena u bijelom dekoru od poda do stropa s detaljima u hrastu, šest ladica na tihi domet i utopljenim ručkama. U spavaćim sobama postavljena su dva bijela ormara od poda do stropa s kliznim vratima i skrivenim ručkama, u četiri kompozicije koje pružaju raznovrstan prostor za odlaganje odjeće i obuće — sve u bezvremenskom, neutralnom dizajnu i praktičnoj funkcionalnosti.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

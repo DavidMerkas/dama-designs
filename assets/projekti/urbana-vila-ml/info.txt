@@ -1,0 +1,14 @@
+naziv: Urbana vila ML
+lokacija: Zagreb
+kategorija: rezidencije        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kompletno opremanje
+opis: (Namještaj koji je namijenjen novim kućama i luksuznim vilama mora biti dizajniran na način  da precizno odražava stil, eleganciju i želju klijenta koji ga naručuje, ali i da omogući  praktičan i koristan prostor za sve osobe koje u njemu žive. Stoga smo mladoj obitelji u novoizgrađenoj urbanoj kući, sukladno njihovim zahtjevima i  željama, projektirali te realizirali kompletno opremanje prostora do useljenja. Naši predani  djelatnici su u svim fazama realizacije ovog zahtjevnog projekta pružili svoje znanje, umijeće  te iskustvo kako bi u konačnici opravdali pruženo povjerenje klijenta.
+
+Opremanje se izvršilo u  tri faze: planiranje-projektiranje, radionička izrada namještaja i montaža namještaja. Na ulazni dio predsoblja kuće ugradili smo veliki ormar u dekoru Kašmir 27049 s elegantnim  zlatnim ručkama, a ormar smo spojili sa zidom tako što smo dodali viseću policu sa  ogledalom do samoga stropa. Kuhinju smo postavili u MDF mat tamno sivoj nijansi. Zidna  obloga i radna ploča kuhinje postavljene su u prošaranom dekoru bijeloga kvarca sa sivim  venama koji joj pružaju veličanstven izgled, ali u isto vrijeme stvaraju opuštajući ambijent s  prostranim otokom. Otok je postavljen u tri boje, njegova prednja i stražnja strana u tamno  sivoj boji, a bokovi ukrašeni drvenim dekorom. Za radnu ploču također je odabran bijeli kvarc  sa sivim venama. Između otoka i dnevnog boravka izradili smo prostran i funkcionalan  blagovaonski stol, dok smo na zidu kao zaleđe za televiziju postavili panel u dekoru Kašmir  27049, te vertikalne dekorativne letvice.
+
+Stepenište koje vodi na drugu etažu ove moderne i lijepe kuće, obložili smo u materijalu  hrast-masiv. U dječjoj sobi za dječaka ugradili smo masivni sivi ormar dekor Storm Grey s mnoštvom  korisnog prostora. Ormar smo ukrasili vertikalnim crnim ručkama. U dječjoj sobi za djevojčice ugrađen je tamno zeleni ormar dekor Verde visine do stropa koji  je ukrašen zlatnim vertikalnim ručkama. Velikoj kupaonici smo uz elegantan viseći ladičar u tamno zelenoj nijansi sa dva umivaonika  dodali visoki ormar koji služi kao vešeraj s prostranim odlagalištem. Ormaru smo u prostor  dodali i perilicu sa sušilicom. Za glavni garderobni prostor za odrasle postavljen je „walk-in“  ugradbeni ormar u dekoru Hrast Sonoma svijetli
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

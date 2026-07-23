@@ -1,0 +1,12 @@
+naziv: Sveti Duh
+lokacija: Sveti Duh, Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Ugradbeni ormari i kuhinja
+opis: Moderan i luksuzan stan u kojem smo kombinirali tri tona — kristalno bijelu, tamno sivu i kašmir. Opseg radova obuhvaćao je kuhinju po mjeri, ormare u hodniku, namještaj za spavaću sobu i kupaonske elemente. Kuhinja je izrađena u okvirnom stilu, s bijelim unutrašnjim ladicama koje kontrastiraju tamno sivim vanjskim okvirima.
+
+Ormar u hodniku izrađen je u kašmir tonu s detaljima ogledala, a ugradbeni ormari u spavaćoj sobi imaju aluminijske profile koji dodatno naglašavaju čistoću linija cijelog prostora.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

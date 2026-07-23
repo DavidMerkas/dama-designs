@@ -1,0 +1,10 @@
+naziv: Rosenheim
+lokacija: Rosenheim, Njemačka
+kategorija: poslovni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kuhinja po mjeri
+opis: Projekt izrade i opremanja kuhinje po mjeri za klijenta u Rosenheimu, Njemačka. Kao i kod svih naših inozemnih projekata, posebna pažnja posvećena je preciznom mjerenju, transportu i montaži na daljinu, uz zadržavanje istih visokih standarda kvalitete kao i za projekte u Hrvatskoj.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

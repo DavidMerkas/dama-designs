@@ -1,0 +1,12 @@
+naziv: Fino bar
+lokacija: Graz, Austrija
+kategorija: poslovni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Opremanje ugostiteljskog prostora
+opis: (U ovom projektu Bistro Fino, Graz – Austrija zadatak je bio stvoriti ugodno okruženje  ponovno otkrivenog okupljališta u srcu grada, gdje se ovaj prostor pokazao kao priveligirano  mjesto za okupljanje, emocionalno istraživanje i uživanje svakodnevnih navika.
+
+U svim rješenjima glavnu riječ vode materijali metal i masiv, u unutarnjem dijelu dominira  slavonski hrast, dok smo u vanjskom dijelu terase obratili paznju na materijal sibirski aris koji  pruza kvalitetu izdrzljivosti i prirodni ambijent ovog iznimnog bistroa. Elementi metala i masivnog drveta, kao i inovativna dizajnerska rješenja karakteriziraju  moderan i udoban stil cijelog prostora.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

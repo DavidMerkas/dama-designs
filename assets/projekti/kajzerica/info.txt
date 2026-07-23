@@ -1,0 +1,13 @@
+naziv: Kajzerica
+lokacija: Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kuhinja po mjeri
+opis: Novo renovirani stan u Zagrebu smo opremili u svijetlim tonovima boja, kombinirano sa  drvenim dekorom Hrast natur. Prostranu i vrlo lijepu bijelu kuhinju smo izradili u materijalima  MDF Acryl i Hrast natur svijetli. Tako, ova elegantna kuhinja nudi jako puno malih dodataka u
+pogledu dizajna poput prostora za pohranu, trendova po pitanju ugrađenih sistema i  praktičnosti u kojoj će budući vlasnici zasigurno olakšano odrađivati svoje kulinarske  specijalitete, te uživati u obiteljsko – prijateljskom druženju.
+
+Ugradbene ormare smo integrirali u ¨niše¨ vrlo izazovnog ulaznog prostora stana, koji je na  kraju pružio maksimalnu iskoristivost za pohranu stvari, odjeće i obuće. Naoko malom  prostoru, pružili smo osjećaj komfora, a praktičnost i užitak osjetiti će najbolje ukućani i  njihovi najbliži.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

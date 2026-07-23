@@ -1,0 +1,12 @@
+naziv: Stan Zvonimirova
+lokacija: Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kuhinja i kupaonski namještaj
+opis: Za novo renoviran stan u Zvonimirovoj ulici osmislili smo kuhinju u mekim sivim tonovima, s otokom koji nudi dodatni prostor za odlaganje boca. Zidna obloga i radna ploča izrađene su u bijelom kvarcu, a zlatne ručke na frontama koje se otvaraju bez naprezanja daju kuhinji prepoznatljiv, topao karakter. Visoki ormar u istom materijalu proteže se do stropa i skriva ugradbeni hladnjak.
+
+U kupaonici smo koristili dekor Tikovina Makalo u snažnoj, ali prirodnoj boji, s prostranim ormarićem za odlaganje i integriranom perilicom i sušilicom, dok su instalacije spretno skrivene iza panela. Otvoreni raspored koji povezuje kuhinju, hodnik, dnevni boravak i kupaonicu daje cijelom stanu visoku estetsku i funkcionalnu vrijednost.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

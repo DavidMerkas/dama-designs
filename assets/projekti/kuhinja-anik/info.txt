@@ -1,0 +1,10 @@
+naziv: Kuhinja Anik
+lokacija: Zagreb
+kategorija: stambeni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Kuhinja po mjeri
+opis: Kuhinja po mjeri izrađena za obitelj u Zagrebu, s naglaskom na praktičnost svakodnevnog korištenja i toplu, suvremenu estetiku prilagođenu prostoru klijenta.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)

@@ -1,0 +1,14 @@
+KAKO ORGANIZIRATI SLIKE PROJEKATA
+=================================
+
+1) Svaki projekt ima svoju mapu (npr. stan-zvonimirova/).
+2) U mapu stavi:
+     naslovna.jpg          -> glavna slika projekta
+     01.jpg, 02.jpg, ...   -> galerija, poredane redom (koristi 01, 02... da se dobro sortiraju)
+3) Format: JPG, web-veličina (duža strana ~1600-2400px). Landscape (pejzaž) izgleda najujednačenije.
+4) Bez razmaka i kvačica (č,ć,ž,š,đ) u nazivima datoteka.
+5) U info.txt svakog projekta dopuni: godinu, opis (kategorija/lokacija su već upisane).
+
+Novi projekt? Samo napravi novu mapu istim principom i javi mi naziv.
+
+Kad ubaciš slike -> javi i ja sve povežem (galerija + lightbox + kartice + kategorije).

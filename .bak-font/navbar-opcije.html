@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar opcije — DAMA Design Interior</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f2f0;--ink:#141414;--muted:#6d6d6d;--faint:#9a9a9a;
+  --line:rgba(20,20,20,.14);--line-soft:rgba(20,20,20,.08);--dark:#161616;
+  --sans:"Hanken Grotesk",-apple-system,sans-serif;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:#e7e5e2;color:var(--ink);font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:1400px;margin:0 auto;padding:64px 40px 120px}
+.page-h{margin-bottom:14px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.page-t{font-size:clamp(2rem,4vw,3.2rem);font-weight:200;text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px}
+.page-d{color:var(--muted);max-width:60ch;margin-bottom:12px}
+
+.variant{margin-top:64px}
+.v-label{display:flex;align-items:baseline;gap:16px;margin-bottom:6px}
+.v-label .num{font-size:12px;letter-spacing:.16em;color:var(--faint)}
+.v-label h2{font-size:1.4rem;font-weight:400;text-transform:uppercase;letter-spacing:.03em}
+.v-note{color:var(--muted);font-size:14px;margin-bottom:20px;max-width:70ch}
+.v-note b{color:var(--ink);font-weight:500}
+.frame{position:relative;overflow:hidden;background:var(--bg);border:1px solid var(--line);min-height:340px}
+.frame.tall{min-height:440px}
+.faux{height:340px;display:flex;align-items:flex-end;padding:40px;background:linear-gradient(180deg,#dedbd6,#eceae6);color:var(--faint);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+
+/* shared nav bits */
+.logo-img{height:30px;width:auto}
+.util{display:flex;justify-content:space-between;align-items:center;padding:9px 30px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--bg);border-bottom:1px solid var(--line-soft)}
+.util .lang a{padding:0 5px}.util .lang a.on{color:var(--ink)}
+.util .r{display:flex;gap:22px}
+.nlink{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);position:relative;white-space:nowrap;cursor:pointer;background:none;border:none;font-family:inherit;font-weight:400}
+.nlink .ar{display:inline-block;margin-left:6px;font-size:9px;transition:transform .3s}
+.pill{border:1px solid var(--ink);padding:10px 20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;transition:all .35s var(--ease)}
+.pill:hover{background:var(--ink);color:var(--bg)}
+.bghero{position:absolute;inset:0;z-index:0;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=70') center/cover;opacity:.9}
+.bghero::after{content:"";position:absolute;inset:0;background:rgba(15,15,15,.35)}
+
+/* ============ A: centered split + dropdown ============ */
+.a-bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:16px 30px;background:var(--bg);border-bottom:1px solid var(--line-soft)}
+.a-nav{display:flex;gap:26px;align-items:center}
+.a-nav.r{justify-self:end}
+.dd{position:relative}
+.dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(8px);background:#fff;border:1px solid var(--line);min-width:210px;padding:10px 0;opacity:0;visibility:hidden;transition:all .3s var(--ease);z-index:20;box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.dd:hover .dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dd:hover .nlink .ar{transform:rotate(180deg)}
+.dd-menu a{display:block;padding:11px 24px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:all .25s}
+.dd-menu a:hover{color:var(--ink);background:var(--bg);padding-left:30px}
+
+/* ============ B: logo left inline ============ */
+.b-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 30px;background:var(--bg);border-bottom:1px solid var(--line-soft);gap:20px}
+.b-nav{display:flex;gap:26px;align-items:center}
+.dd-menu.l{left:0;transform:translateX(0) translateY(8px)}
+.dd:hover .dd-menu.l{transform:translateX(0) translateY(0)}
+
+/* ============ C: mega menu ============ */
+.c-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 30px;background:var(--bg);border-bottom:1px solid var(--line-soft);position:relative;z-index:15}
+.mega{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(8px);transition:all .35s var(--ease);z-index:14;box-shadow:0 24px 50px rgba(0,0,0,.08)}
+.c-dd:hover .mega,.mega:hover{opacity:1;visibility:visible;transform:none}
+.mega-in{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:8px}
+.mega a{padding:26px 20px;transition:background .3s}
+.mega a:hover{background:var(--bg)}
+.mega .mt{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+.mega .ms{font-size:12px;color:var(--muted);margin-top:8px}
+.mega .mn{font-size:11px;color:var(--faint);margin-bottom:14px}
+
+/* ============ D: fullscreen overlay ============ */
+.d-bar{display:flex;align-items:center;justify-content:space-between;padding:20px 30px;position:relative;z-index:5}
+.d-bar .logo-img{filter:brightness(0) invert(1)}
+.burger{display:inline-flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.burger span{width:26px;height:1.5px;background:#fff;transition:.3s}
+.d-bar.dark .nlink{color:#fff}
+.overlay{position:absolute;inset:0;background:var(--dark);z-index:30;display:flex;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;padding:50px 60px}
+.overlay.open{opacity:1;visibility:visible}
+.overlay .cols{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;width:100%;align-self:center}
+.overlay .main-links a{display:block;font-size:1.8rem;font-weight:200;text-transform:uppercase;letter-spacing:.02em;color:#fff;padding:7px 0;transition:color .3s,padding-left .3s}
+.overlay .main-links a:hover{color:var(--faint);padding-left:12px}
+.overlay .sub h4{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+.overlay .sub a{display:block;color:rgba(255,255,255,.75);font-size:14px;padding:7px 0;transition:color .3s}
+.overlay .sub a:hover{color:#fff}
+.overlay .x{position:absolute;top:24px;right:30px;font-size:30px;color:#fff;cursor:pointer;font-weight:200;line-height:1}
+
+/* ============ E: off-canvas sidebar ============ */
+.e-bar{display:flex;align-items:center;justify-content:space-between;padding:20px 30px;position:relative;z-index:5}
+.panel{position:absolute;top:0;right:0;bottom:0;width:min(380px,80%);background:var(--dark);z-index:30;transform:translateX(100%);transition:transform .45s var(--ease);padding:40px 36px;overflow-y:auto}
+.panel.open{transform:none}
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:25;opacity:0;visibility:hidden;transition:.4s}
+.scrim.open{opacity:1;visibility:visible}
+.panel .x{position:absolute;top:20px;right:26px;font-size:26px;color:#fff;cursor:pointer;font-weight:200}
+.panel nav a,.panel .exp>button{display:block;width:100%;text-align:left;color:#fff;font-size:1.05rem;font-weight:300;text-transform:uppercase;letter-spacing:.04em;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1);background:none;border-left:none;border-right:none;border-top:none;font-family:inherit;cursor:pointer}
+.panel .exp>button .ar{float:right;transition:transform .3s}
+.panel .exp.open>button .ar{transform:rotate(180deg)}
+.panel .exp-menu{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.panel .exp.open .exp-menu{max-height:300px}
+.panel .exp-menu a{font-size:13px;text-transform:none;letter-spacing:.02em;color:rgba(255,255,255,.7);padding:11px 0 11px 18px;border-bottom:none}
+
+/* ============ F: two-tier ============ */
+.f-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 30px;background:var(--bg);border-bottom:1px solid var(--line-soft)}
+.f-top .a-nav{gap:26px}
+.f-sub{display:flex;gap:30px;justify-content:center;padding:12px 30px;background:#fff;border-bottom:1px solid var(--line-soft)}
+.f-sub a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .3s}
+.f-sub a:hover,.f-sub a.on{color:var(--ink)}
+
+@media(max-width:820px){
+  .page{padding:40px 20px 80px}
+  .a-nav,.b-nav,.c-bar .nlink,.f-top .a-nav{display:none}
+  .mega-in{grid-template-columns:1fr 1fr}
+  .overlay .cols{grid-template-columns:1fr;gap:34px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page-h">DAMA Design Interior · Prijedlozi</div>
+  <h1 class="page-t">Navbar opcije</h1>
+  <p class="page-d">Šest pristupa navigaciji. Svaki omogućuje dolazak do <b>svake</b> stranice, uključujući 5 podstranica usluga (Kuhinje, Ormari, Kupaonice, Komode, Predsoblja). Isprobaj dropdownove i izbornike, pa odaberi.</p>
+
+  <!-- ============ A ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">01</span><h2>Centrirani split + dropdown</h2></div>
+    <p class="v-note">Trenutni Minotti-stil, ali <b>“Usluge ▾” otvara padajući izbornik</b> s 5 usluga. Zadržava eleganciju, rješava pristup uslugama. <i>(hover na “Usluge”)</i></p>
+    <div class="frame">
+      <div class="util"><div class="lang"><a class="on">HR</a>/<a>EN</a></div><div class="r"><span>+385 91 170 2462</span><span>info@dama-designs.com</span></div></div>
+      <div class="a-bar">
+        <nav class="a-nav">
+          <a class="nlink">O nama</a>
+          <div class="dd"><button class="nlink">Usluge <span class="ar">▾</span></button>
+            <div class="dd-menu"><a>Kuhinje</a><a>Ugradbeni ormari</a><a>Kupaonice</a><a>Komode</a><a>Predsoblja</a></div>
+          </div>
+          <a class="nlink">Projekti</a>
+        </nav>
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <nav class="a-nav r"><a class="nlink">Kako radimo</a><a class="nlink">Recenzije</a><a class="nlink">Kontakt</a></nav>
+      </div>
+      <div class="faux">Hero sadržaj</div>
+    </div>
+  </div>
+
+  <!-- ============ B ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">02</span><h2>Logo lijevo + puna navigacija</h2></div>
+    <p class="v-note">Klasičan raspored: logo lijevo, sve stavke u redu desno, <b>Usluge s dropdownom</b> i istaknuti gumb “Zatražite ponudu”. Sve na dohvat, vrlo pregledno.</p>
+    <div class="frame">
+      <div class="util"><div class="lang"><a class="on">HR</a>/<a>EN</a></div><div class="r"><span>+385 91 170 2462</span><span>info@dama-designs.com</span></div></div>
+      <div class="b-bar">
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <nav class="b-nav">
+          <a class="nlink">O nama</a>
+          <div class="dd"><button class="nlink">Usluge <span class="ar">▾</span></button>
+            <div class="dd-menu l"><a>Kuhinje</a><a>Ugradbeni ormari</a><a>Kupaonice</a><a>Komode</a><a>Predsoblja</a></div>
+          </div>
+          <a class="nlink">Projekti</a>
+          <a class="nlink">Kako radimo</a>
+          <a class="nlink">Recenzije</a>
+          <a class="pill">Zatražite ponudu</a>
+        </nav>
+      </div>
+      <div class="faux">Hero sadržaj</div>
+    </div>
+  </div>
+
+  <!-- ============ C ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">03</span><h2>Mega izbornik</h2></div>
+    <p class="v-note">Hover na “Usluge” otvara <b>široki panel</b> sa svih 5 usluga kao stupci (naziv + kratki opis). Najbogatiji, dojam velikog brenda. <i>(hover na “Usluge”)</i></p>
+    <div class="frame tall">
+      <div class="c-bar">
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <nav class="b-nav">
+          <a class="nlink">O nama</a>
+          <div class="c-dd"><button class="nlink">Usluge <span class="ar">▾</span></button></div>
+          <a class="nlink">Projekti</a>
+          <a class="nlink">Kako radimo</a>
+          <a class="nlink">Kontakt</a>
+        </nav>
+        <div class="mega">
+          <div class="mega-in">
+            <a><div class="mn">01</div><div class="mt">Kuhinje</div><div class="ms">Moderne kuhinje po mjeri, L / U / Blok modeli.</div></a>
+            <a><div class="mn">02</div><div class="mt">Ugradbeni ormari</div><div class="ms">Klizni i walk-in, pametna pohrana.</div></a>
+            <a><div class="mn">03</div><div class="mt">Kupaonice</div><div class="ms">Obloge usklađene s pločicama.</div></a>
+            <a><div class="mn">04</div><div class="mt">Komode</div><div class="ms">Komode i elementi po mjeri.</div></a>
+            <a><div class="mn">05</div><div class="mt">Predsoblja</div><div class="ms">Rješenja za ulazni prostor.</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="faux" style="height:380px">Hero sadržaj</div>
+    </div>
+  </div>
+
+  <!-- ============ D ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">04</span><h2>Fullscreen izbornik</h2></div>
+    <p class="v-note">Minimalna traka preko hero fotke; klik na izbornik otvara <b>cijeli ekran</b> s glavnim linkovima lijevo i uslugama desno. Vrlo “design house”, sve dostupno. <i>(klikni “Izbornik”)</i></p>
+    <div class="frame tall" data-demo="d">
+      <div class="bghero"></div>
+      <div class="d-bar dark">
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <button class="burger js-open"><span></span><span></span><span></span></button>
+      </div>
+      <div class="overlay">
+        <span class="x js-close">&times;</span>
+        <div class="cols">
+          <div class="main-links"><a>Početna</a><a>O nama</a><a>Projekti</a><a>Kako radimo</a><a>Recenzije</a><a>Kontakt</a></div>
+          <div class="sub"><h4>Usluge</h4><a>Kuhinje</a><a>Ugradbeni ormari</a><a>Kupaonice</a><a>Komode</a><a>Predsoblja</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ E ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">05</span><h2>Bočni izbornik (off-canvas)</h2></div>
+    <p class="v-note">Traka + izbornik koji <b>izlazi s desne strane</b>. Usluge se šire klikom (accordion). Kompaktno, radi jednako na desktopu i mobitelu. <i>(klikni “Izbornik”, pa “Usluge”)</i></p>
+    <div class="frame tall" data-demo="e">
+      <div class="bghero"></div>
+      <div class="d-bar dark">
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <button class="burger js-open"><span></span><span></span><span></span></button>
+      </div>
+      <div class="scrim js-close"></div>
+      <div class="panel">
+        <span class="x js-close">&times;</span>
+        <nav>
+          <a>Početna</a>
+          <a>O nama</a>
+          <div class="exp"><button class="js-exp">Usluge <span class="ar">▾</span></button>
+            <div class="exp-menu"><a>Kuhinje</a><a>Ugradbeni ormari</a><a>Kupaonice</a><a>Komode</a><a>Predsoblja</a></div>
+          </div>
+          <a>Projekti</a>
+          <a>Kako radimo</a>
+          <a>Recenzije</a>
+          <a>Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ F ============ -->
+  <div class="variant">
+    <div class="v-label"><span class="num">06</span><h2>Dvoslojni (primarni + trajni pod-izbornik)</h2></div>
+    <p class="v-note">Gornji red: logo + glavna navigacija. Drugi red: <b>uvijek vidljive usluge</b>. Ništa skriveno — sve dostupno u jednom kliku.</p>
+    <div class="frame">
+      <div class="f-top">
+        <nav class="a-nav"><a class="nlink">O nama</a><a class="nlink">Projekti</a><a class="nlink">Kako radimo</a></nav>
+        <img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA">
+        <nav class="a-nav r" style="justify-self:end"><a class="nlink">Recenzije</a><a class="nlink">Kontakt</a></nav>
+      </div>
+      <div class="f-sub">
+        <a class="on">Usluge:</a><a>Kuhinje</a><a>Ugradbeni ormari</a><a>Kupaonice</a><a>Komode</a><a>Predsoblja</a>
+      </div>
+      <div class="faux">Hero sadržaj</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Overlay (D) + Sidebar (E): scope open/close to each demo frame
+document.querySelectorAll('[data-demo]').forEach(frame=>{
+  const open=frame.querySelector('.js-open');
+  const targets=frame.querySelectorAll('.overlay,.panel,.scrim');
+  const openAll=()=>targets.forEach(t=>t.classList.add('open'));
+  const closeAll=()=>targets.forEach(t=>t.classList.remove('open'));
+  if(open)open.onclick=openAll;
+  frame.querySelectorAll('.js-close').forEach(c=>c.onclick=closeAll);
+  // accordion inside sidebar
+  const exp=frame.querySelector('.js-exp');
+  if(exp)exp.onclick=()=>exp.parentElement.classList.toggle('open');
+});
+</script>
+</body>
+</html>

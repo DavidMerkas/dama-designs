@@ -1,0 +1,12 @@
+naziv: Sparta Medica
+lokacija: Graz, Austrija
+kategorija: poslovni        # stambeni | rezidencije | poslovni
+godina: 2024
+usluga: Namještaj za kliniku
+opis: Za sportsko-medicinsku kliniku Sparta Medica u Grazu izradili smo idejno rješenje i namještaj za recepciju, prostorije osoblja, ordinacije i sanitarne prostore, u skladu s austrijskim građevinskim propisima. Recepcijski pult izrađen je u dekoru Hrast Sanremo pijesak s frontalnim dijelom u Egger Levanto mramor bijeli.
+
+Kuhinja za osoblje kombinira Kaindl Blue Avio mat s Hrast Sanremo pijesak dekorom, dok su garderobni ormari izrađeni u istom plavom mat dekoru. Ordinacija liječnika opremljena je u bijelom Egger dekoru s detaljima Hrast Sanremo pijesak, a stakleni pregradni zidovi s aluminijsko-staklenim vratima Dorma Studio Classic okova zaokružuju moderan, funkcionalan ambijent.
+
+# SLIKE u ovu mapu:
+#   naslovna.jpg        -> glavna (hero / thumbnail)
+#   01.jpg, 02.jpg, ... -> galerija, redom (s nulom: 01, 02, ... 10)
