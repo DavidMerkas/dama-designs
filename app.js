@@ -79,17 +79,17 @@ if(gEls.length){
   sync();
 })();
 
-/* ============ PARALLAX (filmstrip slike, 3D dojam pri scrollu) ============ */
+/* ============ PARALLAX (filmstrip + projektne naslovne slike, 3D dojam pri scrollu) ============ */
 (function(){
-  const cards=[...document.querySelectorAll('.show-card')];
+  const cards=[...document.querySelectorAll('.show-card, .tile .ph')];
   if(!cards.length)return;
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   if(reduce.matches)return;
-  /* omotaj svaku sliku u .ph koji je viši od okvira, tako da translateY otkriva rezervu bez praznine */
+  /* omotaj svaku sliku u .ph-in koji je viši od okvira, tako da translateY otkriva rezervu bez praznine */
   const phs=cards.map(card=>{
     const img=card.querySelector('img');
     const ph=document.createElement('span');
-    ph.className='ph';
+    ph.className='ph-in';
     card.insertBefore(ph,img);
     ph.appendChild(img);
     return ph;

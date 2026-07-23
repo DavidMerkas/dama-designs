@@ -19,7 +19,7 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-weight:300;line-height:1.04;letter-spacing:.005em}
 .px{padding-left:var(--pad);padding-right:var(--pad)}
-.wrap{max-width:1440px;margin:0 auto}
+.wrap{max-width:1680px;margin:0 auto}
 .up{text-transform:uppercase}
 .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:400}
 .rev{opacity:0;transform:translateY(26px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
@@ -56,7 +56,9 @@ h1,h2,h3,h4{font-weight:300;line-height:1.04;letter-spacing:.005em}
 /* ============ HERO ============ */
 .hero{position:relative;height:100vh;min-height:620px;overflow:hidden;background:var(--dark)}
 .hero-img{position:absolute;inset:0}
-.hero-img img{width:100%;height:100%;object-fit:cover;opacity:.72}
+.hero-img img{width:100%;height:100%;object-fit:cover;opacity:.72;transform:scale(1);animation:hero-kb 22s ease-in-out infinite alternate}
+@keyframes hero-kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+@media(prefers-reduced-motion:reduce){.hero-img img{animation:none}}
 .hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,15,.5),rgba(15,15,15,.15) 40%,rgba(15,15,15,.55))}
 .hero-c{position:absolute;left:0;right:auto;width:100%;bottom:64px;z-index:3;color:#fff}
 .hero-c .eyebrow{color:rgba(255,255,255,.75);margin-bottom:24px;display:block;opacity:0;animation:fade 1.2s var(--ease) .3s forwards}
@@ -108,9 +110,11 @@ h1,h2,h3,h4{font-weight:300;line-height:1.04;letter-spacing:.005em}
 /* collections / grid with caption BELOW */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .tile{cursor:pointer}
-.tile .ph{overflow:hidden;aspect-ratio:4/5;background:#e4e2df}
-.tile .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.5s var(--ease)}
-.tile:hover .ph img{transform:scale(1.05)}
+.tile .ph{position:relative;overflow:hidden;aspect-ratio:4/5;background:#e4e2df}
+/* .ph-in je viši od okvira - JS ga pomiče okomito prema scrollu (parallax/3D dojam), dok hover-zoom ide na img zasebno */
+.tile .ph-in{position:absolute;left:0;right:0;top:-16%;height:132%;will-change:transform}
+.tile .ph-in img{width:100%;height:100%;object-fit:cover;transition:transform 1.5s var(--ease)}
+.tile:hover .ph-in img{transform:scale(1.05)}
 .tile .cap{display:flex;justify-content:space-between;align-items:baseline;padding:22px 2px 0;border-top:1px solid var(--ink);margin-top:20px}
 .tile .cap h3{font-size:1.15rem;font-weight:400;text-transform:uppercase;letter-spacing:.04em}
 .tile .cap .n{font-size:12px;color:var(--muted);letter-spacing:.1em}
@@ -249,6 +253,12 @@ html[lang="en"] .proj-item .ph::after{content:"View project"}
 .vswitch .vall{color:rgba(255,255,255,.42)}
 .vswitch .vall:hover{background:transparent;color:#fff}
 
+@media(min-width:1680px){
+  :root{--pad:64px}
+}
+@media(min-width:1920px){
+  :root{--pad:80px}
+}
 @media(max-width:1000px){
   :root{--pad:22px}
   .util .r{display:none}
@@ -527,16 +537,17 @@ html[lang="en"] .proj-item .ph::after{content:"View project"}
 .show-head{margin-bottom:52px}
 .show-head .eyebrow{display:block;margin-bottom:20px}
 .show-head h2{font-size:clamp(1.9rem,3.6vw,3.2rem);font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+.show-head p{max-width:46ch;color:var(--muted);font-weight:300;font-size:15px;line-height:1.6;margin-top:20px}
 .show-track-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .show-track{display:flex;width:max-content;gap:22px;animation:show-marquee 52s linear infinite}
 .show-card{position:relative;flex:none;height:440px;overflow:hidden;display:block}
 .show-card.w-s{width:280px}
 .show-card.w-m{width:380px}
 .show-card.w-l{width:540px}
-/* .ph je veći od okvira (overflow:hidden na .show-card ga reže) - JS pomiče .ph okomito prema scrollu za parallax/3D dojam, dok hover-zoom ide na img zasebno pa se ne sudaraju */
-.show-card .ph{position:absolute;left:0;right:0;top:-16%;height:132%;will-change:transform}
-.show-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
-.show-card:hover .ph img{transform:scale(1.06)}
+/* .ph-in je veći od okvira (overflow:hidden na .show-card ga reže) - JS pomiče .ph-in okomito prema scrollu za parallax/3D dojam, dok hover-zoom ide na img zasebno pa se ne sudaraju */
+.show-card .ph-in{position:absolute;left:0;right:0;top:-16%;height:132%;will-change:transform}
+.show-card .ph-in img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.show-card:hover .ph-in img{transform:scale(1.06)}
 .show-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,10,10,.65));opacity:0;transition:opacity .5s var(--ease)}
 .show-card:hover::before{opacity:1}
 .show-card .cap{position:absolute;left:22px;right:22px;bottom:20px;color:#fff;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
