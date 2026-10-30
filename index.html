@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAMA Design Interior — Namještaj po mjeri</title>
+<meta name="description" content="DAMA Design Interior – dizajn i izrada namještaja po mjeri u vlastitoj proizvodnji: kuhinje, ugradbeni ormari, kupaonice i kompletni interijeri. Zagreb, Hrvatska.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DAMA Design Interior">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:title" content="DAMA Design Interior — Namještaj po mjeri">
+<meta property="og:description" content="DAMA Design Interior – dizajn i izrada namještaja po mjeri u vlastitoj proizvodnji: kuhinje, ugradbeni ormari, kupaonice i kompletni interijeri. Zagreb, Hrvatska.">
+<meta property="og:url" content="https://davidmerkas.github.io/dama-designs/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1772567732969-c1506edf80a0?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600&display=swap" rel="stylesheet">
@@ -25,7 +37,7 @@
   <div class="hdr-grid">
     <nav class="nav-l">
       <a href="o-nama.html" data-i18n>O nama</a>
-      <div class="dd"><a href="usluge.html"><span data-i18n>Usluge</span> <span class="ar">▾</span></a><div class="dd-menu"><a href="kuhinje.html" data-i18n>Kuhinje</a><a href="ormari.html" data-i18n>Ugradbeni ormari</a><a href="kupaonice.html" data-i18n>Kupaonice</a><a href="komode.html" data-i18n>Komode</a><a href="predsoblja.html" data-i18n>Predsoblja</a></div></div>
+      <div class="dd"><a href="usluge.html"><span data-i18n>Usluge</span> <span class="ar">▾</span></a><div class="dd-menu"><a href="kuhinje.html" data-i18n>Kuhinje</a><a href="ormari.html" data-i18n>Ugradbeni ormari</a><a href="kupaonice.html" data-i18n>Kupaonice</a><a href="komode.html" data-i18n>Komode</a><a href="predsoblja.html" data-i18n>Predsoblja</a><a href="spavace-sobe.html" data-i18n>Spavaće sobe</a></div></div>
       <a href="projekti.html" data-i18n>Projekti</a>
     </nav>
     <a href="index.html" class="logo"><span class="logo-text"><span class="name">DAMA <b>DESIGN</b></span><span class="sub">INTERIOR</span></span><img class="logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA Design Interior"></a>
@@ -41,24 +53,43 @@
 <!-- MOBILE MENU -->
 <div class="mmenu" id="mmenu">
   <span class="cl" id="mclose">&times;</span>
-  <a href="o-nama.html" data-i18n>O nama</a><a href="usluge.html" data-i18n>Usluge</a><a href="kuhinje.html" class="svc" data-i18n>Kuhinje</a><a href="ormari.html" class="svc" data-i18n>Ugradbeni ormari</a><a href="kupaonice.html" class="svc" data-i18n>Kupaonice</a><a href="komode.html" class="svc" data-i18n>Komode</a><a href="predsoblja.html" class="svc" data-i18n>Predsoblja</a><a href="projekti.html" data-i18n>Projekti</a>
+  <a href="o-nama.html" data-i18n>O nama</a><a href="usluge.html" data-i18n>Usluge</a><a href="kuhinje.html" class="svc" data-i18n>Kuhinje</a><a href="ormari.html" class="svc" data-i18n>Ugradbeni ormari</a><a href="kupaonice.html" class="svc" data-i18n>Kupaonice</a><a href="komode.html" class="svc" data-i18n>Komode</a><a href="predsoblja.html" class="svc" data-i18n>Predsoblja</a><a href="spavace-sobe.html" class="svc" data-i18n>Spavaće sobe</a><a href="projekti.html" data-i18n>Projekti</a>
   <a href="kako-radimo.html" data-i18n>Kako radimo</a><a href="recenzije.html" data-i18n>Recenzije</a><a href="kontakt.html" data-i18n>Kontakt</a>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="pocetna">
-  <div class="hero-slider">
-    <div class="hero-img active"><img src="assets/hero/kuhinja-otok.jpg" alt="Kuhinja s otokom i blagovaonica s mramornim stolom"></div>
-    <div class="hero-img"><img src="https://images.unsplash.com/photo-1672137233327-37b0c1049e77?auto=format&fit=crop&w=1920&q=80" alt="Walk-in ormar sa staklenim stijenama i LED rasvjetom"></div>
-    <div class="hero-img"><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1920&q=80" alt="Kuhinja po mjeri"></div>
-    <div class="hero-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80" alt="Interijer po mjeri"></div>
+<!-- HERO: 3 slajda, svaki sa svojim tekstom (kuhinja, garderoba, kupaonica) -->
+<section class="hero hero-multi" id="pocetna">
+  <div class="hero-slide active" data-label="Kuhinje">
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1772567732969-c1506edf80a0?auto=format&fit=crop&w=1920&q=80" alt="Kuhinja s mramornom stijenom, toplom LED rasvjetom i drvenim otokom" style="object-position:center 100%"></div>
+    <div class="hero-c px wrap">
+      <h1 class="hero-title"><span class="ln"><span data-i18n>Elegantna jednostavnost.</span></span><span class="ln"><span data-i18n>Svakodnevni luksuz.</span></span></h1>
+      <p class="hero-lead" data-i18n>Prava elegancija ne nameće se glasno – ona se osjeti pod prstima, u savršenom spoju kamena i drva, u lakoći svakog pokreta i miru koji prostor pruža. Projektiramo kuhinje koje prirodno prate vaš ritam i ostaju bezvremenske godinama nakon što trendovi prođu.</p>
+      <div class="hero-actions">
+        <a href="kontakt.html" class="btn-solid" data-i18n>Stvorite svoj prostor</a>
+        <a href="projekti.html" class="tlink" data-i18n>Otkrijte radove</a>
+      </div>
+    </div>
   </div>
-  <div class="hero-c px wrap" style="left:50%;transform:translateX(-50%);max-width:1440px">
-    <h1><span class="ln"><span data-i18n>Prostor</span></span><span class="ln"><span data-i18n>bez kompromisa</span></span></h1>
-    <p class="hero-lead" data-i18n>Dizajniramo i izrađujemo kuhinje, ormare i namještaj po mjeri u vlastitoj proizvodnji. Od prve skice do posljednjeg detalja.</p>
-    <div class="hero-actions">
-      <a href="kontakt.html" class="btn-solid" data-i18n>Dogovorite sastanak</a>
-      <a href="projekti.html" class="tlink" data-i18n>Pogledajte projekte</a>
+  <div class="hero-slide" data-label="Garderobe">
+    <div class="hero-img"><img src="assets/hero-ormar.webp" alt="Walk-in ormar iza staklenih stijena s LED rasvjetom i orahovim drvom" loading="lazy"></div>
+    <div class="hero-c px wrap">
+      <h2 class="hero-title"><span class="ln"><span data-i18n>Prostor</span></span><span class="ln"><span data-i18n>bez kompromisa</span></span></h2>
+      <p class="hero-lead" data-i18n>Garderobni ormari po mjeri projektirani do zadnjeg milimetra. Spoj vrhunske mehanike, integrirane rasvjete i pedantne izrade u vlastitoj proizvodnji.</p>
+      <div class="hero-actions">
+        <a href="kontakt.html" class="btn-solid" data-i18n>Zatražite ponudu</a>
+        <a href="projekti.html" class="tlink" data-i18n>Galerija radova</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" data-label="Kupaonice">
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1722858812659-9355f9b64931?auto=format&fit=crop&w=1920&q=80" alt="Kupaonica s dvostrukim umivaonikom, LED ogledalom i drvenim lebdećim elementom" style="object-position:center 40%" loading="lazy"></div>
+    <div class="hero-c px wrap">
+      <h2 class="hero-title"><span class="ln"><span data-i18n>Čiste linije.</span></span><span class="ln"><span data-i18n>Svakodnevni sklad.</span></span></h2>
+      <p class="hero-lead" data-i18n>Prava elegancija vidi se u lakoći lebdećih elemenata, ugodnoj ambijentalnoj rasvjeti i besprijekornom spoju ploče i umivaonika. Stvaramo kupaonice po mjeri gdje je svaki detalj podređen vašem komforu i osjećaju čistog mira.</p>
+      <div class="hero-actions">
+        <a href="kontakt.html" class="btn-solid" data-i18n>Stvorite svoj prostor</a>
+        <a href="projekti.html" class="tlink" data-i18n>Otkrijte radove</a>
+      </div>
     </div>
   </div>
 </section>
@@ -89,8 +120,11 @@
 <!-- SIGNATURE SHOWCASE -->
 <section class="show" id="galerija" aria-label="Izdvojeni radovi">
   <div class="show-head px wrap">
-    <span class="eyebrow">Izdvojeni radovi</span>
-    <h2>Prostori koje smo oblikovali</h2>
+    <div>
+      <span class="eyebrow" data-i18n>Izdvojeni radovi</span>
+      <h2 data-i18n>Prostori koje smo oblikovali</h2>
+    </div>
+    <a href="projekti.html" class="tlink" data-i18n>Svi projekti</a>
   </div>
   <div class="show-track-wrap">
     <div class="show-track">
@@ -100,7 +134,7 @@
       <a class="show-card w-l" href="projekt-fino-bar.html"><span class="show-media"><img src="assets/projekti/fino-bar/02.jpg" alt="Ugostiteljski prostor"></span><span class="cap"><span class="cap-t">Ugostiteljski prostor</span><span class="cap-l">Fino bar · Graz, Austrija</span></span></a>
       <a class="show-card w-s" href="projekt-du.html"><span class="show-media"><img src="assets/projekti/projekt-du/02.jpg" alt="Namještaj po mjeri"></span><span class="cap"><span class="cap-t">Namještaj po mjeri</span><span class="cap-l">Projekt DU · Sesvete</span></span></a>
       <a class="show-card w-m" href="projekt-sveti-duh.html"><span class="show-media"><img src="assets/projekti/sveti-duh/01.jpg" alt="Kuhinja po mjeri"></span><span class="cap"><span class="cap-t">Kuhinja po mjeri</span><span class="cap-l">Sveti Duh · Zagreb</span></span></a>
-      <a class="show-card w-s" href="projekt-urbana-vila-ml.html"><span class="show-media"><img src="assets/projekti/urbana-vila-ml/04.jpg" alt="Kuhinja po mjeri"></span><span class="cap"><span class="cap-t">Kuhinja po mjeri</span><span class="cap-l">Urbana vila ML · Zagreb</span></span></a>
+      <a class="show-card w-s" href="projekt-stan-vukic.html"><span class="show-media"><img src="assets/projekti/stan-vukic/naslovna.jpg" alt="Kuhinja i ormari, Stan Vukić"></span><span class="cap"><span class="cap-t">Kuhinja i ormari</span><span class="cap-l">Stan Vukić · Zagreb</span></span></a>
 
       <a class="show-card w-l" href="projekt-urbana-vila-ml.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/urbana-vila-ml/03.jpg" alt=""></span><span class="cap"><span class="cap-t">Kuhinja po mjeri</span><span class="cap-l">Urbana vila ML · Zagreb</span></span></a>
       <a class="show-card w-m" href="projekt-stan-zvonimirova.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/stan-zvonimirova/05.jpg" alt=""></span><span class="cap"><span class="cap-t">Kuhinja i kupaonica</span><span class="cap-l">Stan Zvonimirova · Zagreb</span></span></a>
@@ -108,7 +142,7 @@
       <a class="show-card w-l" href="projekt-fino-bar.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/fino-bar/02.jpg" alt=""></span><span class="cap"><span class="cap-t">Ugostiteljski prostor</span><span class="cap-l">Fino bar · Graz, Austrija</span></span></a>
       <a class="show-card w-s" href="projekt-du.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/projekt-du/02.jpg" alt=""></span><span class="cap"><span class="cap-t">Namještaj po mjeri</span><span class="cap-l">Projekt DU · Sesvete</span></span></a>
       <a class="show-card w-m" href="projekt-sveti-duh.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/sveti-duh/01.jpg" alt=""></span><span class="cap"><span class="cap-t">Kuhinja po mjeri</span><span class="cap-l">Sveti Duh · Zagreb</span></span></a>
-      <a class="show-card w-s" href="projekt-urbana-vila-ml.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/urbana-vila-ml/04.jpg" alt=""></span><span class="cap"><span class="cap-t">Kuhinja po mjeri</span><span class="cap-l">Urbana vila ML · Zagreb</span></span></a>
+      <a class="show-card w-s" href="projekt-stan-vukic.html" aria-hidden="true" tabindex="-1"><span class="show-media"><img src="assets/projekti/stan-vukic/naslovna.jpg" alt=""></span><span class="cap"><span class="cap-t">Kuhinja i ormari</span><span class="cap-l">Stan Vukić · Zagreb</span></span></a>
     </div>
   </div>
 </section>
@@ -127,43 +161,28 @@
 </section>
 
 <!-- DAMA DESIGN STANDARD PROIZVODNJE -->
-<section class="standard photo" style="--standard-bg-img:url('https://images.unsplash.com/photo-1774709540246-d3c45850a192?auto=format&fit=crop&w=1920&q=80')">
-  <div class="grid px wrap">
-    <div class="rev">
-      <span class="eyebrow">DAMA Design Standard Proizvodnje</span>
-      <h2>Tehnološka preciznost i majstorski dodir</h2>
-    </div>
-    <p class="rev">Vaš kompletan namještaj izrađujemo pomoću najnovije hibridne CNC tehnologije – uz obradu u nultoj točki, mikroskopski precizne spojeve i savršenu liniju završne obrade. Kroz spoj najmodernijeg računalno upravljanog pogona i završnog dodira naših dugogodišnjih majstora garantiramo da u vaš dom stiže točno ono što ste s nama isprojektirali – u besprijekornom, vrhunskom izgledu bez kompromisa.</p>
-  </div>
-</section>
-
 <!-- PROCESS -->
 <section class="sec px wrap" id="proces">
-  <div class="sec-h"><div class="l"><span class="eyebrow" data-i18n>Kako radimo</span><h2 data-i18n>Od ideje do doma</h2></div></div>
+  <div class="sec-h"><div class="l"><span class="eyebrow" data-i18n>Kako radimo</span><h2 data-i18n>Od ideje do doma</h2></div><a href="kako-radimo.html" class="tlink" data-i18n>Cijeli proces</a></div>
   <ol class="proc-grid">
     <li class="proc rev" style="--i:0">
       <span class="n" aria-hidden="true">01</span>
-      <div class="proc-img"><img src="https://images.unsplash.com/photo-1657778232464-2932ffa2b68d?auto=format&fit=crop&w=800&q=80" alt="Konzultacija i mjerenje prostora" loading="lazy" width="800" height="1000"></div>
       <h3 data-i18n>Konzultacija</h3><p data-i18n>Mjerenje prostora i razumijevanje vaših potreba.</p>
     </li>
     <li class="proc rev" style="--i:1">
       <span class="n" aria-hidden="true">02</span>
-      <div class="proc-img"><img src="https://images.unsplash.com/photo-1603901622056-0a5bee231395?auto=format&fit=crop&w=800&q=80" alt="Idejni dizajn i 3D vizualizacija" loading="lazy" width="800" height="1000"></div>
       <h3 data-i18n>Idejni dizajn</h3><p data-i18n>3D vizualizacija i prijedlog materijala u 48 sati.</p>
     </li>
     <li class="proc rev" style="--i:2">
       <span class="n" aria-hidden="true">03</span>
-      <div class="proc-img"><img src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?auto=format&fit=crop&w=800&q=80" alt="Izrada u vlastitom pogonu" loading="lazy" width="800" height="1000"></div>
       <h3 data-i18n>Izrada</h3><p data-i18n>Proizvodnja u vlastitom pogonu uz najviše standarde.</p>
     </li>
     <li class="proc rev" style="--i:3">
       <span class="n" aria-hidden="true">04</span>
-      <div class="proc-img"><img src="https://images.unsplash.com/photo-1526450402191-50979219a8e1?auto=format&fit=crop&w=800&q=80" alt="Montaža namještaja" loading="lazy" width="800" height="1000"></div>
       <h3 data-i18n>Montaža</h3><p data-i18n>Dostava i profesionalna montaža vašeg namještaja.</p>
     </li>
     <li class="proc rev" style="--i:4">
       <span class="n" aria-hidden="true">05</span>
-      <div class="proc-img"><img src="https://images.unsplash.com/photo-1733244766159-f58f4184fd38?auto=format&fit=crop&w=800&q=80" alt="Primopredaja gotovog projekta" loading="lazy" width="800" height="1000"></div>
       <h3 data-i18n>Primopredaja</h3><p data-i18n>Tehnički pregled i predaja gotovog projekta.</p>
     </li>
   </ol>
@@ -173,9 +192,16 @@
 <section class="feature">
   <div class="img rev"><img src="https://images.unsplash.com/photo-1580920461922-ee625ecbfc27?auto=format&fit=crop&w=1200&q=80" alt="CNC obrada u vlastitom proizvodnom pogonu"></div>
   <div class="txt rev">
-    <span class="eyebrow" data-i18n>Proizvodnja</span>
-    <h2 data-i18n>Od ideje do savršenog reza</h2>
-    <p data-i18n>Spajamo obrtničku pažnju prema detaljima s najnovijom generacijom računalno upravljane tehnologije za raskroj i obradu. Svaki element koji projektiramo izrađuje se u našem vlastitom pogonu uz milimetarsku preciznost, osiguravajući besprijekoran spoj i trajnost.</p>
+    <span class="eyebrow" data-i18n>Vlastiti pogon</span>
+    <h2 data-i18n>DAMA Design | Proizvodnja vrhunskog namještaja</h2>
+    <p class="feat-lead" data-i18n>Spoj napredne tehnologije, majstorskog znanja i beskompromisne preciznosti.</p>
+    <p data-i18n>Vaš kompletan namještaj izrađujemo u vlastitom pogonu, najnovijom hibridnom CNC tehnologijom i uz završni dodir naših dugogodišnjih majstora. Tako u vaš dom stiže točno ono što ste s nama isprojektirali, u besprijekornom izgledu i bez kompromisa.</p>
+    <ul class="feat-mach" aria-label="Strojevi u pogonu">
+      <li>FIMAL Concept 350 Plus</li>
+      <li>KDT kanterica</li>
+      <li>Maggi GT 800</li>
+      <li>Cormak odsis</li>
+    </ul>
     <a href="kako-radimo.html" class="tlink" data-i18n>Kako radimo</a>
   </div>
 </section>
@@ -185,22 +211,6 @@
   <div class="stat rev" style="--i:0"><div class="n" data-count="8" data-suffix="+">8+</div><div class="t" data-i18n>Godina u Hrvatskoj</div><div class="t-note" data-i18n>uz višegodišnje iskustvo iz Italije</div></div>
   <div class="stat rev" style="--i:1"><div class="n" data-count="500" data-suffix="+">500+</div><div class="t" data-i18n>Završenih projekata</div></div>
   <div class="stat rev" style="--i:2"><div class="n" data-count="100" data-suffix="%">100%</div><div class="t" data-i18n>Vlastita proizvodnja i preciznost</div></div>
-</section>
-
-<!-- PROJECTS -->
-<section class="sec projects px" id="projekti">
-  <div class="wrap">
-    <div class="sec-h">
-      <div class="l"><span class="eyebrow" data-i18n>Izdvojeni projekti</span><h2 data-i18n>Prostori koje potpisujemo</h2></div>
-      <a href="projekti.html" class="tlink" data-i18n>Svi projekti</a>
-    </div>
-    <div class="grid2">
-      <a class="tile rev" href="projekt-stan-zvonimirova.html"><div class="ph"><img src="assets/projekti/stan-zvonimirova/naslovna.jpg" alt="Stan Zvonimirova"></div><div class="cap"><h3>Stan Zvonimirova</h3><span class="n">Zagreb</span></div></a>
-      <a class="tile rev" href="projekt-urbana-vila-ml.html"><div class="ph"><img src="assets/projekti/urbana-vila-ml/naslovnica.jpg" alt="Urbana vila ML"></div><div class="cap"><h3>Urbana vila ML</h3><span class="n">Zagreb</span></div></a>
-      <a class="tile rev" href="projekt-stan-vukic.html"><div class="ph"><img src="assets/projekti/stan-vukic/naslovna.jpg" alt="Stan Vukić"></div><div class="cap"><h3>Stan Vukić</h3><span class="n">Zagreb</span></div></a>
-      <a class="tile rev" href="projekt-du.html"><div class="ph"><img src="assets/projekti/projekt-du/naslovna.jpg" alt="Projekt DU"></div><div class="cap"><h3>Projekt DU</h3><span class="n">Sesvete, Zagreb</span></div></a>
-    </div>
-  </div>
 </section>
 
 <!-- REVIEWS -->
@@ -213,6 +223,33 @@
     <div class="review rev" style="--i:0"><p data-i18n>Ormari su predivni, iznad našeg očekivanja. Kvaliteta, cijena, profesionalnost i način komunikacije čista desetka. Topla preporuka!</p><div class="name">Anamarija</div></div>
     <div class="review rev" style="--i:1"><p data-i18n>Cijeli proces od planiranja do montaže protekao je ugodno i bez problema. Pazili su na svaki detalj. Velika preporuka!</p><div class="name">Marina M.</div></div>
     <div class="review rev" style="--i:2"><p data-i18n>Profesionalni, uljudni, dostupni. Kako je dogovoreno, tako je i isporučeno. Rezultat fantastičan, čak i bolje nego sam očekivao.</p><div class="name">Danijel M.</div></div>
+  </div>
+</section>
+
+<!-- CLANCI -->
+<section class="sec px wrap jr" id="inspiracija">
+  <div class="sec-h">
+    <div class="l"><span class="eyebrow" data-i18n>Inspiracija</span><h2 data-i18n>Kuhinje iz bližeg kuta</h2></div>
+  </div>
+  <div class="jr-row">
+    <a class="jr-card rev" href="clanak-blok-jedinice.html" style="--i:0">
+      <div class="jr-img"><img src="https://images.unsplash.com/photo-1742280879518-ada47b660ccd?auto=format&fit=crop&w=900&q=80" alt="Kuhinja s visokim elementima od drva do stropa i mramornom stijenom" loading="lazy"></div>
+      <h3>Glatke linearne blok jedinice</h3>
+      <p>Ergonomski oblici, udubljene ručke i visoke jedinice od poda do stropa koje u trenu skrivaju sve što ne treba biti na pogledu.</p>
+      <span class="tlink jr-more" data-i18n>Pročitaj članak</span>
+    </a>
+    <a class="jr-card rev" href="clanak-rasvjeta.html" style="--i:1">
+      <div class="jr-img"><img src="https://images.unsplash.com/photo-1684928365167-e91916573122?auto=format&fit=crop&w=900&q=80" alt="Drvena kuhinja s LED rasvjetom ispod elemenata i otoka" loading="lazy"></div>
+      <h3>Moderne kuhinje i rasvjeta</h3>
+      <p>Ambijentalna, spot i skrivena rasvjeta: zašto je svjetlo temeljni element dizajna kuhinje, a ne samo završni detalj.</p>
+      <span class="tlink jr-more" data-i18n>Pročitaj članak</span>
+    </a>
+    <a class="jr-card rev" href="clanak-prirodni-materijali.html" style="--i:2">
+      <div class="jr-img"><img src="https://images.unsplash.com/photo-1760067537540-cc36c1700d7e?auto=format&fit=crop&w=900&q=80" alt="Kuhinja otvorena prema vrtu, s toplim drvom i tamnim otokom" loading="lazy"></div>
+      <h3>Moderne kuhinje prirodnih materijala</h3>
+      <p>Hrast, antracit i kvarc: umirujuće nijanse, ručke koje nestaju i kamen koji se nastavlja s radne ploče na bokove otoka.</p>
+      <span class="tlink jr-more" data-i18n>Pročitaj članak</span>
+    </a>
   </div>
 </section>
 
@@ -232,15 +269,6 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta" id="kontakt">
-  <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1920&q=80" alt="">
-  <div class="in px">
-    <span class="eyebrow" data-i18n>Zatražite ponudu</span>
-    <h2 data-i18n>Osmislimo vaš prostor</h2>
-    <a href="kontakt.html" class="btn inv" data-i18n>Kontaktirajte nas</a>
-  </div>
-</section>
 
 <!-- FOOTER -->
 
@@ -249,7 +277,7 @@
     <div class="ftr-main">
       <div class="ftr-cta">
         <span class="eyebrow" data-i18n>Zatražite ponudu</span>
-        <h3 data-i18n>Dogovorite sastanak</h3>
+        <h3 data-i18n>Osmislimo vaš prostor</h3>
         <p class="sub" data-i18n>Pošaljite nam nekoliko riječi o projektu. Javljamo se s idejnim rješenjem u 48 sati.</p>
         <form class="ftr-form" onsubmit="return false">
           <div class="row2">
@@ -258,13 +286,15 @@
           </div>
           <div class="field"><input type="email" placeholder="E-pošta" data-i18n-ph></div>
           <div class="field"><textarea placeholder="Vaša poruka (opcionalno)" data-i18n-ph></textarea></div>
+          <label class="consent"><input type="checkbox" required> <span><span data-i18n>Pročitao/la sam</span> <a href="politika-privatnosti.html" data-i18n>Politiku privatnosti</a> <span data-i18n>i slažem se da me kontaktirate u vezi s ovim upitom.</span></span></label>
           <button type="submit" data-i18n>Pošalji upit</button>
         </form>
       </div>
       <div class="ftr-side">
-        <div class="logo"><img class="ftr-logo-img" src="assets/DAMA-DESIGN-LOGO-WEB1.png" alt="DAMA Design Interior"></div>
+        <div class="logo"><img class="ftr-logo-img" src="assets/DAMA-DESIGN-LOGO-WHITE-DBOX.png" alt="DAMA Design Interior"></div>
         <p class="tag" data-i18n>Dizajn i izrada namještaja po mjeri. Made in Croatia.</p>
-        <div class="ftr-line"><span class="k" data-i18n>Adresa</span><span class="v">Ul. Dragutina Mitića 7, 10360 Sesvete</span></div>
+        <div class="ftr-line"><span class="k" data-i18n>Sjedište</span><span class="v">Ul. Dragutina Mitića 7, 10360 Sesvete</span></div>
+        <div class="ftr-line"><span class="k" data-i18n>Pogon</span><span class="v">Đačka ul., 10020 Zagreb (Odra)</span></div>
         <div class="ftr-line"><span class="k" data-i18n>Email</span><span class="v"><a href="mailto:info@dama-designs.com">info@dama-designs.com</a></span></div>
         <div class="ftr-line"><span class="k" data-i18n>Telefon</span><span class="v"><a href="tel:+385911702462">+385 91 170 2462</a></span></div>
         <div class="ftr-line"><span class="k" data-i18n>Radno vrijeme</span><span class="v" data-i18n>Pon – Pet · 08:00 – 17:00</span></div>
@@ -278,7 +308,7 @@
     </div>
     <div class="ftr-bot">
       <span data-i18n>© 2026 DAMA Design Interior d.o.o. · Sva prava pridržana.</span>
-      <span data-i18n>Zagreb · Hrvatska</span>
+      <span><a href="politika-privatnosti.html" data-i18n>Politika privatnosti</a> · <span data-i18n>Zagreb · Hrvatska</span></span>
     </div>
   </div>
 </footer>

@@ -14,17 +14,33 @@ mmenu.querySelectorAll('a').forEach(a=>a.onclick=()=>mmenu.classList.remove('ope
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 
-/* ============ HERO SLIDER ============ */
+/* ============ HERO SLIDER (3 slajda, svaki sa svojim tekstom) ============ */
 (function(){
-  const slides=[...document.querySelectorAll('.hero-slider .hero-img')];
+  const hero=document.querySelector('.hero-multi');
+  if(!hero)return;
+  const slides=[...hero.querySelectorAll('.hero-slide')];
   if(slides.length<2)return;
-  let i=slides.findIndex(s=>s.classList.contains('active'));
-  if(i<0)i=0;
-  setInterval(()=>{
-    slides[i].classList.remove('active');
-    i=(i+1)%slides.length;
-    slides[i].classList.add('active');
-  },6000);
+  const DUR=7000;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i=0,timer;
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach((s,k)=>{const on=k===i;s.classList.toggle('active',on);s.inert=!on;s.setAttribute('aria-hidden',on?'false':'true')});
+    clearTimeout(timer);
+    if(!reduce)timer=setTimeout(()=>go(i+1),DUR);
+  }
+  go(0);
+})();
+
+/* ============ SLAJDER SLIKA U KORAKU (.chap-img.slides) ============ */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.querySelectorAll('.chap-img.slides').forEach(box=>{
+    const imgs=[...box.querySelectorAll('img')];
+    if(imgs.length<2)return;
+    let i=0;
+    setInterval(()=>{imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on')},4500);
+  });
 })();
 
 /* ============ STAT COUNTERS ============ */
@@ -147,37 +163,6 @@ if(gEls.length){
   });
 })();
 
-/* ============ CTA BACKGROUND ROTATOR (Osmislimo vaš prostor - crossfade kroz nekoliko enterijera) ============ */
-(function(){
-  const pool=[
-    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=1920&q=80'
-  ];
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  document.querySelectorAll('section.cta').forEach(sec=>{
-    const base=sec.querySelector('img');
-    if(!base)return;
-    const alt=base.cloneNode();
-    alt.removeAttribute('alt');
-    alt.style.opacity='0';
-    alt.style.transition='opacity 1.8s ease';
-    base.style.transition='opacity 1.8s ease';
-    sec.insertBefore(alt,base.nextSibling);
-    let i=Math.max(0,pool.indexOf(base.getAttribute('src')));
-    let front=base,back=alt;
-    setInterval(()=>{
-      i=(i+1)%pool.length;
-      back.src=pool[i];
-      back.style.opacity='1';
-      front.style.opacity='0';
-      [front,back]=[back,front];
-    },6000);
-  });
-})();
-
 /* ============ GRID SPOTLIGHT HOVER (grid3/grid2 dim-ostalih efekt, JS umjesto CSS :hover da gapovi između kartica ne okidaju dim na sve) ============ */
 (function(){
   document.querySelectorAll('.grid3, .grid2').forEach(grid=>{
@@ -187,3 +172,6 @@ if(gEls.length){
     });
   });
 })();
+
+// "Detaljnije" na stranicama usluga
+(function(){document.querySelectorAll('.std-toggle').forEach(btn=>{const more=document.getElementById(btn.getAttribute('aria-controls'));const lab=btn.querySelector('.std-lab');if(!more)return;btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));more.classList.toggle('open',open);lab.textContent=open?'Zatvori':'Detaljnije';});});})();
