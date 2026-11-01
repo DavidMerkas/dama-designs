@@ -38,8 +38,11 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
   document.querySelectorAll('.chap-img.slides').forEach(box=>{
     const imgs=[...box.querySelectorAll('img')];
     if(imgs.length<2)return;
+    const ind=document.createElement('span');ind.className='slides-ind';ind.setAttribute('aria-hidden','true');
+    ind.innerHTML=imgs.map(()=>'<span></span>').join('');box.appendChild(ind);
+    const bars=[...ind.children];bars[0].classList.add('on');
     let i=0;
-    setInterval(()=>{imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on')},4500);
+    setInterval(()=>{imgs[i].classList.remove('on');bars[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');bars[i].classList.add('on')},4500);
   });
 })();
 
@@ -64,23 +67,6 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
   const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){run(e.target);cio.unobserve(e.target)}})},{threshold:.4});
   nums.forEach(el=>cio.observe(el));
 })();
-
-const fbar=document.querySelector('.filters');
-const fgrid=document.querySelector('.grid3, .pgrid');
-if(fbar&&fgrid){
-  const items=[...document.querySelectorAll('.proj-item')];
-  fbar.querySelectorAll('button').forEach(b=>b.onclick=()=>{
-    if(b.classList.contains('on'))return;
-    fbar.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');
-    const f=b.dataset.f;
-    fgrid.classList.add('fading');
-    setTimeout(()=>{
-      items.forEach(it=>{it.style.display=(f==='all'||it.dataset.cat===f)?'':'none'});
-      fgrid.classList.remove('fading');
-    }, 260);
-  });
-}
 
 const gEls=[...document.querySelectorAll('.gallery .g img')];
 if(gEls.length){
@@ -175,3 +161,12 @@ if(gEls.length){
 
 // "Detaljnije" na stranicama usluga
 (function(){document.querySelectorAll('.std-toggle').forEach(btn=>{const more=document.getElementById(btn.getAttribute('aria-controls'));const lab=btn.querySelector('.std-lab');if(!more)return;btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));more.classList.toggle('open',open);lab.textContent=open?'Zatvori':'Detaljnije';});});})();
+
+// Google karta i pristanak na kolacice (samo na Kontaktu)
+(function(){const w=document.querySelector('.map-wrap');if(!w)return;const b=w.querySelector('.map-load'),bar=document.getElementById('cookie-bar'),off=w.querySelector('.map-off');const KEY='dama-kolacici';const get=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};const set=v=>{try{localStorage.setItem(KEY,v)}catch(e){}};function load(){const f=document.createElement('iframe');f.className='map';f.src=b.dataset.src;f.title=b.dataset.title;f.referrerPolicy='no-referrer-when-downgrade';b.replaceWith(f);off.hidden=false;}function accept(){set('da');bar.hidden=true;load();}const s=get();if(s==='da')load();else if(s!=='ne')bar.hidden=false;b.addEventListener('click',accept);bar.querySelector('.ck-yes').addEventListener('click',accept);bar.querySelector('.ck-no').addEventListener('click',()=>{set('ne');bar.hidden=true;});off.addEventListener('click',()=>{set('ne');location.reload();});})();
+
+// Prikaz odabrane datoteke u kontakt formi
+(function(){const i=document.getElementById('prilog');if(!i)return;const t=document.querySelector('.file-name');i.addEventListener('change',()=>{t.textContent=[...i.files].map(f=>f.name).join(', ');});})();
+
+// O nama: slike u kolazu klize razlicitom brzinom dok se skrola
+(function(){const els=[...document.querySelectorAll('.on-i[data-speed]')];if(!els.length||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const wide=matchMedia('(min-width:821px)');let tick=false;function run(){tick=false;const vh=innerHeight;els.forEach(e=>{if(!wide.matches){e.style.transform='';return}const r=e.getBoundingClientRect(),cur=new DOMMatrix(getComputedStyle(e).transform).m42,mid=r.top-cur+r.height/2;if(mid<-vh||mid>vh*2)return;e.style.transform=`translate3d(0,${((mid-vh/2)*parseFloat(e.dataset.speed)).toFixed(1)}px,0)`;});}function on(){if(!tick){tick=true;requestAnimationFrame(run)}}addEventListener('scroll',on,{passive:true});addEventListener('resize',on);run();})();

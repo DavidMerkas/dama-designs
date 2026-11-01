@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=gambetta@300,400,301,401&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,15 +50,8 @@
   <a href="kako-radimo.html" data-i18n>Kako radimo</a><a href="recenzije.html" data-i18n>Recenzije</a><a href="kontakt.html" data-i18n>Kontakt</a>
 </div>
 
-<section class="hero short">
-  <div class="hero-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80" alt="Recenzije"></div>
-  <div class="hero-c px wrap" style="left:50%;transform:translateX(-50%);max-width:1440px">
-    <span class="eyebrow" data-i18n>Recenzije</span>
-    <h1><span class="ln"><span data-i18n>Ono što kažu</span></span><span class="ln"><span data-i18n>naši klijenti</span></span></h1>
-  </div>
-</section>
-
-<section class="sec px wrap" style="padding-top:100px;padding-bottom:0">
+<section class="sec px wrap rev-top" style="padding-bottom:0">
+  <h1 class="vh"><span data-i18n>Ono što kažu</span> <span data-i18n>naši klijenti</span></h1>
   <div class="rev-feat rev">
     <p class="q"><span class="qm" aria-hidden="true">&bdquo;</span>Izvođač je bio maksimalno susretljiv, profesionalan i fokusiran na naše želje. Ormari su predivni, iznad našeg očekivanja. Kvaliteta, cijena, profesionalnost i način komunikacije čista desetka.<span class="qm" aria-hidden="true">&ldquo;</span></p>
     <div class="who">
@@ -65,6 +59,7 @@
     </div>
   </div>
 
+  <!-- Fotka klijenta iza recenzije: na .rev-note dodati has-photo i style="--rev-img:url('assets/recenzije/ime.webp')". Čeka fotke od Damira. -->
   <div class="rev-cloud">
     <div class="rev-note rev" style="--i:0"><span class="qm" aria-hidden="true">„</span><p>Gospođa Martina je vrlo profesionalna, pedantna i uvijek dostupna za bilo kakva pitanja. Pazila je na svaki detalj te svojim iskustvom puno pomogla. Cijeli proces od planiranja do montaže protekao je ugodno i bez problema.</p><span class="name">Marina M.</span></div>
     <div class="rev-note rev" style="--i:1"><span class="qm" aria-hidden="true">„</span><p>Profesionalni, uljudni, dostupni. Kako je dogovoreno, tako je i isporučeno. Rezultat fantastičan, čak i bolje nego sam očekivao.</p><span class="name">Danijel M.</span></div>
@@ -114,7 +109,7 @@
       </div>
       <div class="ftr-side">
         <div class="logo"><img class="ftr-logo-img" src="assets/DAMA-DESIGN-LOGO-WHITE-DBOX.png" alt="DAMA Design Interior"></div>
-        <p class="tag" data-i18n>Dizajn i izrada namještaja po mjeri. Made in Croatia.</p>
+        <p class="tag" data-i18n>Dizajn i izrada namještaja po mjeri.</p>
         <div class="ftr-line"><span class="k" data-i18n>Sjedište</span><span class="v">Ul. Dragutina Mitića 7, 10360 Sesvete</span></div>
         <div class="ftr-line"><span class="k" data-i18n>Pogon</span><span class="v">Đačka ul., 10020 Zagreb (Odra)</span></div>
         <div class="ftr-line"><span class="k" data-i18n>Email</span><span class="v"><a href="mailto:info@dama-designs.com">info@dama-designs.com</a></span></div>
@@ -124,6 +119,7 @@
         <div class="ftr-social"><a href="https://www.instagram.com/damadesigninterior/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/damadesigns" target="_blank" rel="noopener">Facebook</a></div>
       </div>
     </div>
+    <div class="ftr-made"><span class="ftr-made-t">Made in Croatia</span><span class="ftr-made-n" data-i18n>Projektiramo i izrađujemo u vlastitom pogonu u Zagrebu.</span></div>
     <div class="ftr-pay">
       <span class="note" data-i18n>Mogućnost plaćanja karticama na rate. Broj rata i obračun kamata reguliraju se isključivo Općim uvjetima kartičnog poslovanja banke.</span>
       <div class="ftr-cards"><img src="assets/kartice/Nacini-placanja_kartice1-1536x248.png" alt="Načini plaćanja"></div>

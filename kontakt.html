@@ -49,36 +49,38 @@
   <a href="kako-radimo.html" data-i18n>Kako radimo</a><a href="recenzije.html" data-i18n>Recenzije</a><a href="kontakt.html" data-i18n>Kontakt</a>
 </div>
 
-<!-- PAGE HERO -->
-<section class="hero short">
-  <div class="hero-img"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1920&q=80" alt="Kontakt"></div>
-  <div class="hero-c px wrap" style="left:50%;transform:translateX(-50%);max-width:1440px">
-    <span class="eyebrow" data-i18n>Kontakt</span>
-    <h1><span class="ln"><span data-i18n>Razgovarajmo o</span></span><span class="ln"><span data-i18n>vašem projektu</span></span></h1>
-  </div>
-</section>
-
 <!-- CONTACT -->
-<section class="section px">
+<section class="section px kontakt-top">
   <div class="wrap">
-    <div class="contact-intro rev">
-      <span class="eyebrow" data-i18n>Javite nam se</span>
-      <p class="lead" data-i18n>Kontaktirajte nas s povjerenjem za sva pitanja o vašoj kuhinji ili namještaju po mjeri. Javljamo se s idejnim rješenjem u samo 48 sati.</p>
-    </div>
     <div class="contact-grid">
-      <div class="contact-info rev">
+      <div class="contact-side rev">
+        <h1 data-i18n>Recite nam o vašim potrebama</h1>
+        <div class="contact-info">
         <div class="block"><h4 data-i18n>Sjedište</h4><p>Ul. Dragutina Mitića 7<br>10360 Sesvete, Zagreb</p></div>
         <div class="block"><h4 data-i18n>Pogon</h4><p>Đačka ul.<br>10020 Zagreb (Odra)</p></div>
         <div class="block"><h4 data-i18n>E-pošta</h4><a href="mailto:info@dama-designs.com">info@dama-designs.com</a></div>
         <div class="block"><h4 data-i18n>Telefon</h4><a href="tel:+385911702462">+385 91 170 2462</a></div>
         <div class="block"><h4 data-i18n>Radno vrijeme</h4><p data-i18n>Pon – Pet · 08:00 – 17:00</p></div>
-      </div>
+        </div>      </div>
       <div class="rev">
+        <!-- Na statičnoj stranici forma još ne šalje podatke. Slanje (i privitka) rješava se u WordPressu. -->
         <form class="form" onsubmit="return false">
-          <div class="field"><label for="ime" data-i18n>Vaše ime</label><div class="box"><input id="ime" type="text" placeholder="Ime i prezime" data-i18n-ph></div></div>
-          <div class="field"><label for="mail" data-i18n>Vaša e-pošta</label><div class="box"><input id="mail" type="email" placeholder="ime@primjer.com"></div></div>
-          <div class="field"><label for="tel" data-i18n>Vaš telefon</label><div class="box"><input id="tel" type="tel" placeholder="+385"></div></div>
-          <div class="field"><label for="msg" data-i18n>Poruka</label><div class="box"><textarea id="msg" placeholder="Opišite svoj projekt (opcionalno)" data-i18n-ph></textarea></div></div>
+          <div class="field"><label for="ime" data-i18n>Ime i prezime</label><div class="box"><input id="ime" name="ime" type="text" autocomplete="name"></div></div>
+          <div class="form-2">
+            <div class="field"><label for="tel" data-i18n>Telefon</label><div class="box"><input id="tel" name="telefon" type="tel" placeholder="+385" autocomplete="tel"></div></div>
+            <div class="field"><label for="grad" data-i18n>Grad</label><div class="box"><input id="grad" name="grad" type="text" autocomplete="address-level2"></div></div>
+          </div>
+          <div class="field"><label for="mail" data-i18n>E-pošta</label><div class="box"><input id="mail" name="email" type="email" placeholder="ime@primjer.com" autocomplete="email"></div></div>
+          <div class="field"><label for="msg" data-i18n>Opis</label><div class="box"><textarea id="msg" name="opis" placeholder="Što želite napraviti, u kojem prostoru i otprilike kada?" data-i18n-ph></textarea></div></div>
+          <div class="field">
+            <span class="file-lab" data-i18n>Tlocrt ili skica (opcionalno)</span>
+            <label class="file-box" for="prilog">
+              <input id="prilog" name="prilog" type="file" accept=".pdf,.jpg,.jpeg,.png" multiple>
+              <span class="file-btn" data-i18n>Dodajte datoteku</span>
+              <span class="file-name"></span>
+              <span class="file-hint" data-i18n>PDF, JPG ili PNG</span>
+            </label>
+          </div>
           <label class="consent"><input type="checkbox" required> <span><span data-i18n>Pročitao/la sam</span> <a href="politika-privatnosti.html" data-i18n>Politiku privatnosti</a> <span data-i18n>i slažem se da me kontaktirate u vezi s ovim upitom.</span></span></label>
           <button class="btn" type="submit" data-i18n>Pošalji upit</button>
         </form>
@@ -86,7 +88,14 @@
     </div>
   </div>
   <div class="wrap" style="margin-top:70px">
-    <iframe class="map" src="https://www.google.com/maps?q=%C4%90a%C4%8Dka%20ul.%2C%2010020%2C%20Odra&output=embed" title="DAMA Design Interior — lokacija" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-wrap">
+      <button class="map-load" type="button" data-src="https://www.google.com/maps?q=%C4%90a%C4%8Dka%20ul.%2C%2010020%2C%20Odra&amp;output=embed" data-title="DAMA Design Interior — lokacija">
+        <span class="map-t" data-i18n>Prikaži kartu</span>
+        <span class="map-n" data-i18n>Karta se učitava s Google Maps, koji tada može postaviti svoje kolačiće.</span>
+      </button>
+      <a class="map-ext" href="https://www.google.com/maps/search/?api=1&amp;query=%C4%90a%C4%8Dka%20ul.%2C%2010020%20Zagreb" target="_blank" rel="noopener" data-i18n>Otvori u Google kartama</a>
+      <button class="map-off" type="button" hidden data-i18n>Isključi kartu</button>
+    </div>
   </div>
 </section>
 
@@ -110,7 +119,7 @@
       </div>
       <div class="ftr-side">
         <div class="logo"><img class="ftr-logo-img" src="assets/DAMA-DESIGN-LOGO-WHITE-DBOX.png" alt="DAMA Design Interior"></div>
-        <p class="tag" data-i18n>Dizajn i izrada namještaja po mjeri. Made in Croatia.</p>
+        <p class="tag" data-i18n>Dizajn i izrada namještaja po mjeri.</p>
         <div class="ftr-line"><span class="k" data-i18n>Sjedište</span><span class="v">Ul. Dragutina Mitića 7, 10360 Sesvete</span></div>
         <div class="ftr-line"><span class="k" data-i18n>Pogon</span><span class="v">Đačka ul., 10020 Zagreb (Odra)</span></div>
         <div class="ftr-line"><span class="k" data-i18n>Email</span><span class="v"><a href="mailto:info@dama-designs.com">info@dama-designs.com</a></span></div>
@@ -120,6 +129,7 @@
         <div class="ftr-social"><a href="https://www.instagram.com/damadesigninterior/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/damadesigns" target="_blank" rel="noopener">Facebook</a></div>
       </div>
     </div>
+    <div class="ftr-made"><span class="ftr-made-t">Made in Croatia</span><span class="ftr-made-n" data-i18n>Projektiramo i izrađujemo u vlastitom pogonu u Zagrebu.</span></div>
     <div class="ftr-pay">
       <span class="note" data-i18n>Mogućnost plaćanja karticama na rate. Broj rata i obračun kamata reguliraju se isključivo Općim uvjetima kartičnog poslovanja banke.</span>
       <div class="ftr-cards"><img src="assets/kartice/Nacini-placanja_kartice1-1536x248.png" alt="Načini plaćanja"></div>
@@ -132,6 +142,11 @@
 </footer>
 
 
+
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Kolačići" hidden>
+  <p><span data-i18n>Karta na ovoj stranici dolazi s Google Mapsa, koji postavlja svoje kolačiće.</span> <a href="politika-privatnosti.html" data-i18n>Više u Politici privatnosti</a></p>
+  <div class="ck-acts"><button class="ck-no" type="button" data-i18n>Bez karte</button><button class="ck-yes" type="button" data-i18n>Prihvaćam</button></div>
+</div>
 
 <script src="i18n.js"></script>
 <script src="app.js"></script>
